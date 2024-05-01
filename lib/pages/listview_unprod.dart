@@ -42,15 +42,15 @@ class _UnitProduksiPageState extends State<UnitProduksiPage> {
           child: ListTile(
             title: Text('${unprod[index].kode_unprod}'),
             subtitle: Text('${unprod[index].nama_unprod}'),
-            leading: Container(
-              color: Colors.amber,
-              width: 60,
-              height: 60,
+            leading: CircleAvatar(
+              radius: 30,
+              backgroundImage: NetworkImage(unprod[index].foto_unprod),
+              //child: Image.network(unprod[index].foto_unprod, fit: BoxFit.fill, width: 20, height: 20)
+              ),
             ),
             
           ),
         ),
-      ),
-    );
+      );
   }
 }

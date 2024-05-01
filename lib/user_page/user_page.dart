@@ -43,7 +43,11 @@ class _UserPageState extends State<UserPage> {
             child: ListTile(
               title: Text('${users[index].nipp}'),
               subtitle: Text('${users[index].nama}'),
-              leading: const Icon(Icons.person),
+              leading: CircleAvatar(
+              radius: 30,
+              backgroundImage: NetworkImage(users[index].foto),
+              //child: Image.network(unprod[index].foto_unprod, fit: BoxFit.fill, width: 20, height: 20)
+              ),
               //leading: Image.network(users[index].foto,),
               
             ),
